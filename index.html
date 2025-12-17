@@ -62,7 +62,21 @@
 </div>
 
 <h1>Magnific PopUp</h1>
+<div class="zoom-gallery">
+	<!--
 
+	Width/height ratio of thumbnail and the main image must match to avoid glitches.
+
+	If ratios are different, you may add CSS3 opacity transition to the main image to make the change less noticable.
+
+	 -->
+	<a img src="img/1.jpg" data-source="http://500px.com/photo/32736307" title="Into The Blue" style="width:193px;height:125px;">
+		<img src="img/2.jpg" width="193" height="125">
+	</a>
+	<aimg src="img/3.jpg" data-source="http://500px.com/photo/32554131" title="Light Sabre" style="width:82px;height:125px;">
+		<img src="img/4.jpg" width="82px" height="125">
+	</a>
+</div>
 
 	
 <script src="js/jquery-3.7.1.js"></script>
@@ -73,6 +87,41 @@
 
 <!-- Magnific Popup core JS file -->
 <script src="magnific-popup/jquery.magnific-popup.js"></script>
+<script>
+	$(document).ready(function() {
+	$('.zoom-gallery').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeOnContentClick: false,
+		closeBtnInside: false,
+		mainClass: 'mfp-with-zoom mfp-img-mobile',
+
+		// If you enable allowHTMLInTemplate - 
+		// make sure your HTML attributes are sanitized if they can be created by a non-admin user
+		allowHTMLInTemplate: true,
+		image: {
+			verticalFit: true,
+			titleSrc: function(item) {
+				return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300, // don't foget to change the duration also in CSS
+			opener: function(element) {
+				return element.find('img');
+			}
+		}
+		
+	});
+});
+
+</script>
+	
 <script>
 $(function () {
 
