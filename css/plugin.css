@@ -22,3 +22,8 @@ h1 {
 .ui-droppable {
 	background-position: top;
 }
+
+owl-carousel item img{
+	height: 70px;
+	width: 38px;
+}
