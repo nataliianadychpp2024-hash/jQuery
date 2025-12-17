@@ -18,3 +18,7 @@ h1 {
   margin: auto;
   background: rgba (0, 0, 0, 0.2)
 }
+.ui-draggable, 
+.ui-droppable {
+	background-position: top;
+}
