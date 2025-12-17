@@ -1,0 +1,14 @@
+.bad-script-regular {
+  font-family: "Bad Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  font-family: "Bad Script", cursive;
+  font-size: 25px;
+  color: #474747;
+}
+h1 {
+  font-align: center;
+  font-weight: 300;
+}
