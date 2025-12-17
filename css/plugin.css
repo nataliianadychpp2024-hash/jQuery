@@ -12,3 +12,9 @@ h1 {
   font-align: center;
   font-weight: 300;
 }
+
+.container {
+  width: 1024;
+  margin: auto;
+  background: rgba (0, 0, 0, 0.2)
+}
