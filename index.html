@@ -2,14 +2,14 @@
 <html lang="uk">
 <head>
   <meta charset="utf-8">
-  <title>jQuery UI</title>
+  <title>jQuery UI + OwlCarousel</title>
 
+  <!-- CSS -->
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="css/plugin.css">
 
   <link rel="stylesheet" href="OwlCarousel/dist/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="OwlCarousel/dist/assets/owl.theme.default.min.css">
-
 </head>
 
 <body>
@@ -19,90 +19,68 @@
 
   <div id="accordion">
     <h3>Section 1</h3>
-    <div>
-      <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam.</p>
-    </div>
+    <div><p>Mauris mauris ante.</p></div>
 
     <h3>Section 2</h3>
-    <div>
-      <p>Sed non urna. Donec et ante. Phasellus eu ligula.</p>
-    </div>
+    <div><p>Sed non urna.</p></div>
 
     <h3>Section 3</h3>
     <div>
-      <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus.</p>
+      <p>Nam enim risus.</p>
       <ul>
-        <li>List item one</li>
-        <li>List item two</li>
-        <li>List item three</li>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
       </ul>
     </div>
 
     <h3>Section 4</h3>
-    <div>
-      <p>Cras dictum. Pellentesque habitant morbi tristique.</p>
-    </div>
+    <div><p>Cras dictum.</p></div>
   </div>
 </div>
 
 <h1>Datepicker</h1>
-
 <p>Date: <input type="text" id="datepicker"></p>
-  
+
 <h1>Slider</h1>
 <div id="slider"></div>
 
 <h1>OwlCarousel</h1>
 <div class="owl-carousel owl-theme">
-    <div class="item"><h4>1</h4></div>
-    <div class="item"><h4>2</h4></div>
-    <div class="item"><h4>3</h4></div>
-    <div class="item"><h4>4</h4></div>
-    <div class="item"><h4>5</h4></div>
-    <div class="item"><h4>6</h4></div>
-    <div class="item"><h4>7</h4></div>
-    <div class="item"><h4>8</h4></div>
-    <div class="item"><h4>9</h4></div>
-    <div class="item"><h4>10</h4></div>
-    <div class="item"><h4>11</h4></div>
-    <div class="item"><h4>12</h4></div>
+  <div class="item"><h4>1</h4></div>
+  <div class="item"><h4>2</h4></div>
+  <div class="item"><h4>3</h4></div>
+  <div class="item"><h4>4</h4></div>
+  <div class="item"><h4>5</h4></div>
+  <div class="item"><h4>6</h4></div>
 </div>
-  $('.owl-carousel').owlCarousel({
-    rtl:true,
-    loop:true,
-    margin:10,
-    nav:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:5
-        }
-    }
-})
-  
+
+<!-- JS -->
 <script src="js/jquery-3.7.1.js"></script>
-<script src="OwlCarousel/dist/owl.carousel.min.js">
-  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+<script src="OwlCarousel/dist/owl.carousel.min.js"></script>
+
 <script>
-  $( function() {
-    $( "#accordion" ).accordion();
-  } );
+$(function () {
+
+  $("#accordion").accordion();
+  $("#datepicker").datepicker();
+  $("#slider").slider();
+
+  $(".owl-carousel").owlCarousel({
+    rtl: true,
+    loop: true,
+    margin: 10,
+    nav: true,
+    responsive: {
+      0: { items: 1 },
+      600: { items: 3 },
+      1000: { items: 5 }
+    }
+  });
+
+});
 </script>
-  <script>
-  $( function() {
-    $( "#datepicker" ).datepicker();
-  } );
-  </script>
-  <script>
-  $( function() {
-    $( "#slider" ).slider();
-  } );
-  </script>
 
 </body>
 </html>
