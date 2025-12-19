@@ -143,10 +143,13 @@
 <script>
 $(function () {
 
-  $("#accordion").accordion();
   $("#datepicker").datepicker();
   $("#slider").slider();
-
+$( function() {
+    $( "#accordion" ).accordion({
+      collapsible: true
+    });
+  } );
   $(".owl-carousel").owlCarousel({
     rtl: true,
     loop: true,
